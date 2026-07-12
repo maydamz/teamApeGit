@@ -4,7 +4,7 @@
 # CharacterBody3D
 # |- MeshInstance3D
 # |- CollisionShape3D
-# |- Node3dD
+# |- Node3D
 #	 |- Camera3D
 
 # Input mapping:
