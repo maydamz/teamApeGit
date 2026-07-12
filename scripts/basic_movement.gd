@@ -1,11 +1,11 @@
 # Basic 3D movement script
 
 # Player setup:
-# CharacterBody3D
+# CharacterBody3D (rename to Player)
 # |- MeshInstance3D
 # |- CollisionShape3D
 # |- Node3D
-#	 |- Camera3D
+#	 |- Camera3D (rename to Head)
 
 # Input mapping:
 # move_forward: W (physical)
