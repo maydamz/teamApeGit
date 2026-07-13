@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://tjcl8sytknbr"]
+
+[ext_resource type="FontFile" uid="uid://cdyk8anelwlr4" path="res://assets/fonts/Salmon Typewriter 9 Regular.ttf" id="1_pq8q7"]
+[ext_resource type="Script" uid="uid://fgjh1qts2vrm" path="res://scripts/UI/dialogue.gd" id="1_pyidc"]
+[ext_resource type="Script" uid="uid://cc06b371n2l8c" path="res://scripts/UI/test_open_script.gd" id="1_vvh5c"]
+[ext_resource type="Script" uid="uid://cklia2uk5xun5" path="res://scripts/UI/dialogue_fancy_text.gd" id="4_28aoi"]
+
+[sub_resource type="Theme" id="Theme_gace6"]
+default_font = ExtResource("1_pq8q7")
+default_font_size = 19
+
+[node name="rootFORDIALOGUE" type="Node3D" unique_id=1296331082]
+script = ExtResource("1_vvh5c")
+
+[node name="uiLayer" type="CanvasLayer" parent="." unique_id=536031944]
+follow_viewport_enabled = true
+
+[node name="dialogueContainer" type="Control" parent="uiLayer" unique_id=1210499589]
+layout_mode = 3
+anchor_left = 0.187
+anchor_top = 0.75600004
+anchor_right = 0.809
+anchor_bottom = 0.94100004
+offset_left = -0.34399414
+offset_top = 0.111968994
+offset_right = -0.08795166
+offset_bottom = 0.23199463
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_pyidc")
+
+[node name="dialogueTextContainer" type="VBoxContainer" parent="uiLayer/dialogueContainer" unique_id=834834877]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="dialogueText" type="RichTextLabel" parent="uiLayer/dialogueContainer/dialogueTextContainer" unique_id=402866051]
+layout_mode = 2
+theme = SubResource("Theme_gace6")
+theme_override_colors/font_shadow_color = Color(0.083392166, 0.08339194, 0.08339203, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+bbcode_enabled = true
+fit_content = true
+horizontal_alignment = 1
+visible_characters_behavior = 1
+script = ExtResource("4_28aoi")
