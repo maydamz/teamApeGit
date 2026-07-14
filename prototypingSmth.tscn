@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://1su47tyhnp5c" path="res://assets/map/Slums.glb" id="1_8tnbf"]
 [ext_resource type="Script" uid="uid://b3e8u13siup3m" path="res://scripts/main.gd" id="1_hl5ok"]
-[ext_resource type="Script" uid="uid://cva2e2nptrnqq" path="res://LightCycling.gd" id="1_ms3tc"]
+[ext_resource type="Script" uid="uid://cva2e2nptrnqq" path="res://scripts/world/light_cycling.gd" id="1_ms3tc"]
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="2_5y6i5"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_j0jw5"]
