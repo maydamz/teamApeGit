@@ -12,7 +12,7 @@
 # move_left: A (physical)
 # move_right: S (physical)
 # move_backward: D (physical)
-# sprint
+# sprint: Shift (physical)
 
 extends CharacterBody3D
 
