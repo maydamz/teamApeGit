@@ -1,28 +1,37 @@
-# Basic 3D movement script
+# Basic 3D first-person movement script
 
 # Player setup:
-# CharacterBody3D (rename to Player)
-# |- MeshInstance3D
+# CharacterBody3D
+# |- MeshInstance3D (rename to Player)
 # |- CollisionShape3D
-# |- Node3D
-#	 |- Camera3D (rename to Head)
+# |- Node3D (rename to Head)
+#	 |- Camera3D
 
 # Input mapping:
 # move_forward: W (physical)
 # move_left: A (physical)
 # move_right: S (physical)
 # move_backward: D (physical)
+# sprint
 
 extends CharacterBody3D
 
 # Movement variables
-const SPEED = 5.0
+var speed
+var sprint_enabled = false # Sprint is disabled by default
+const WALK_SPEED = 5.0
+const SPRINT_SPEED = 8.0
 
-# Camera variables
+# Camera bob variables
 const SENSITIVITY = 0.001
 const BOB_FREQ = 2.0
 const BOB_AMP = 0.08
 var t_bob = 0.0
+
+# FOV control variables
+var base_fov = 75.0
+const FOV_CHANGE = 1.5
+
 
 # Accessing head and camera as variables
 @onready var head: Node3D = $Head
@@ -43,20 +52,32 @@ func _physics_process(delta: float) -> void:
 	# Gravity
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-
+	
+	# Sprint
+	if sprint_enabled == true and Input.is_action_pressed("sprint"):
+		speed = SPRINT_SPEED
+	else:
+		speed = WALK_SPEED
+	
 	# Directional movement controls
 	var input_dir := Input.get_vector("move_left", "move_right", "move_forward", "move_backward")
 	var direction := (head.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	
 	if direction:
-		velocity.x = direction.x * SPEED
-		velocity.z = direction.z * SPEED
+		velocity.x = direction.x * speed
+		velocity.z = direction.z * speed
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.z = move_toward(velocity.z, 0, SPEED)
+		velocity.x = lerp(velocity.x, direction.x * speed, delta * 7.0)
+		velocity.z = lerp(velocity.z, direction.z * speed, delta * 7.0)
 	
 	# Enable head bobbing
 	t_bob += delta * velocity.length() * float(is_on_floor())
 	camera.transform.origin = _headbob(t_bob)
+	
+	# FOV effects
+	var velocity_clamped = clamp(velocity.length(), 0.5, SPRINT_SPEED * 2)
+	var target_fov = base_fov + FOV_CHANGE * velocity_clamped
+	camera.fov = lerp(camera.fov, target_fov, delta * 8.0)
 	
 	# Collision handling with other bodies
 	move_and_slide()
