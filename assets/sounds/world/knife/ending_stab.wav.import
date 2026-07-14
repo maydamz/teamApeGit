@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bjggmpk0iq3r1"
-path="res://.godot/imported/ending_stab.wav-17d6420f01f38e42a04f8e4bd75be28f.sample"
+path="res://.godot/imported/ending_stab.wav-68f5d802cd69690778f9b965be854d97.sample"
 
 [deps]
 
-source_file="res://assets/sounds/world/player/ending_stab.wav"
-dest_files=["res://.godot/imported/ending_stab.wav-17d6420f01f38e42a04f8e4bd75be28f.sample"]
+source_file="res://assets/sounds/world/knife/ending_stab.wav"
+dest_files=["res://.godot/imported/ending_stab.wav-68f5d802cd69690778f9b965be854d97.sample"]
 
 [params]
 

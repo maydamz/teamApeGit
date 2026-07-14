@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://b60grcqhfgjeq"
-path="res://.godot/imported/body_drop.wav-5e391993caa95a88932f0c040a80099e.sample"
+path="res://.godot/imported/body_drop.wav-ba27219aa1930a272414c0e21d696ecf.sample"
 
 [deps]
 
-source_file="res://assets/sounds/world/player/body_drop.wav"
-dest_files=["res://.godot/imported/body_drop.wav-5e391993caa95a88932f0c040a80099e.sample"]
+source_file="res://assets/sounds/world/knife/body_drop.wav"
+dest_files=["res://.godot/imported/body_drop.wav-ba27219aa1930a272414c0e21d696ecf.sample"]
 
 [params]
 

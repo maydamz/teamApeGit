@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://clhao104ujtdk"
-path="res://.godot/imported/tension.wav-4fdba9ffe9b643db75cf688add4caaa9.sample"
+path="res://.godot/imported/tension.wav-4e050def9e885b81280f205123fbf1b9.sample"
 
 [deps]
 
-source_file="res://assets/sounds/world/player/tension.wav"
-dest_files=["res://.godot/imported/tension.wav-4fdba9ffe9b643db75cf688add4caaa9.sample"]
+source_file="res://assets/sounds/world/knife/tension.wav"
+dest_files=["res://.godot/imported/tension.wav-4e050def9e885b81280f205123fbf1b9.sample"]
 
 [params]
 
