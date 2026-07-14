@@ -1,5 +1,6 @@
 extends Node3D
 
+@onready var _main : Node = $"../.."
 @export var light_source:DirectionalLight3D
 @export var skybox:WorldEnvironment
 @export var day_length:float
@@ -31,4 +32,3 @@ func _process(delta: float) -> void:
 	else:
 		light_source.light_energy = lerp(light_source.light_energy, light_str_night,1-cycle * 2)
 		#skybox.environment.background_color = sky_color_night
-	pass

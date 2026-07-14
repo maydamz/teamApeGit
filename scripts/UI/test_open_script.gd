@@ -15,4 +15,4 @@ func _ready() -> void:
 #check https://docs.godotengine.org/en/latest/tutorials/ui/bbcode_in_richtextlabel.html
 #for more formatting options (like color, bold, italic, etc)
 
-#to close the dialogue, do _dialogue.close() (makes the dialogue text invisible)
+#to close the dialogue, do _dialogue.close() (this makes the dialogue text invisible)

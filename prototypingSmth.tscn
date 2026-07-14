@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://dpkaam44kvx3o"]
 
 [ext_resource type="PackedScene" uid="uid://1su47tyhnp5c" path="res://assets/map/Slums.glb" id="1_8tnbf"]
+[ext_resource type="Script" uid="uid://b3e8u13siup3m" path="res://scripts/main.gd" id="1_hl5ok"]
 [ext_resource type="Script" uid="uid://cva2e2nptrnqq" path="res://LightCycling.gd" id="1_ms3tc"]
-[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/Protocontroller/proto_controller.tscn" id="2_5y6i5"]
-[ext_resource type="Script" uid="uid://y8ueci0xlcqu" path="res://addons/Protocontroller/proto_controller.gd" id="3_ms3tc"]
+[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="2_5y6i5"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_j0jw5"]
 
@@ -27,13 +27,13 @@ volumetric_fog_density = 0.236
 size = Vector3(3.0425873, 0.5078125, 3.1386719)
 
 [node name="PrototypingSmth" type="Node" unique_id=1038682562]
+script = ExtResource("1_hl5ok")
 
 [node name="Slums" parent="." unique_id=172014667 instance=ExtResource("1_8tnbf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.239975, 0, -3.0023642)
 
 [node name="ProtoController" parent="." unique_id=533232366 instance=ExtResource("2_5y6i5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.825676, 0.39300013, -38.373497)
-script = ExtResource("3_ms3tc")
 sprint_speed = 15.0
 input_left = "left"
 input_right = "right"
