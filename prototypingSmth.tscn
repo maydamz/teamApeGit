@@ -2,26 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://1su47tyhnp5c" path="res://assets/map/Slums.glb" id="1_8tnbf"]
 [ext_resource type="Script" uid="uid://b3e8u13siup3m" path="res://scripts/main.gd" id="1_hl5ok"]
-[ext_resource type="Script" uid="uid://cva2e2nptrnqq" path="res://scripts/world/light_cycling.gd" id="1_ms3tc"]
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="2_5y6i5"]
-
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_j0jw5"]
-
-[sub_resource type="Sky" id="Sky_hl5ok"]
-sky_material = SubResource("ProceduralSkyMaterial_j0jw5")
-
-[sub_resource type="Environment" id="Environment_8pujc"]
-background_mode = 1
-background_color = Color(0.9216953, 0.7990291, 0.76493114, 1)
-sky = SubResource("Sky_hl5ok")
-ambient_light_color = Color(0.66791785, 0.33974802, 0.44291687, 1)
-tonemap_mode = 2
-sdfgi_enabled = true
-fog_light_energy = 0.93
-fog_sun_scatter = 0.19
-fog_density = 0.0224
-fog_sky_affect = 0.3
-volumetric_fog_density = 0.236
+[ext_resource type="PackedScene" uid="uid://dtc61b6475wea" path="res://scenes/day_night_system.tscn" id="3_ms3tc"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pp2fj"]
 size = Vector3(3.0425873, 0.5078125, 3.1386719)
@@ -32,6 +14,8 @@ script = ExtResource("1_hl5ok")
 [node name="Slums" parent="." unique_id=172014667 instance=ExtResource("1_8tnbf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.239975, 0, -3.0023642)
 
+[node name="DayNightSystem" parent="." unique_id=590354505 instance=ExtResource("3_ms3tc")]
+
 [node name="ProtoController" parent="." unique_id=533232366 instance=ExtResource("2_5y6i5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.825676, 0.39300013, -38.373497)
 sprint_speed = 15.0
@@ -40,36 +24,6 @@ input_right = "right"
 input_forward = "up"
 input_back = "down"
 input_jump = "jump"
-
-[node name="DayNight" type="Node3D" parent="ProtoController" unique_id=961803611 node_paths=PackedStringArray("light_source", "skybox")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.825676, -0.39300013, 38.373497)
-script = ExtResource("1_ms3tc")
-light_source = NodePath("Sun")
-skybox = NodePath("WorldEnvironment")
-day_length = 5.0
-light_str_day = 0.4
-light_str_night = 0.2
-sky_color_day = Color(0.91441876, 0.8899193, 0.3478098, 0.73333335)
-sky_color_night = Color(0.24811123, 0.44478136, 0.7371289, 0.62352943)
-
-[node name="Sun" type="DirectionalLight3D" parent="ProtoController/DayNight" unique_id=1076089]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.9999999, -22.580763, 46.627403, -48.381737)
-light_color = Color(1.9202205, 1.8053931, 0.77960277, 1)
-light_energy = 0.4
-light_indirect_energy = 2.207
-light_volumetric_fog_energy = 4.683
-light_angular_distance = 18.57
-shadow_enabled = true
-shadow_bias = 1.727
-shadow_normal_bias = 2.913
-shadow_transmittance_bias = 2.463
-shadow_opacity = 0.86
-shadow_blur = 1.595
-directional_shadow_max_distance = 2313.0
-sky_mode = 1
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="ProtoController/DayNight" unique_id=1496792287]
-environment = SubResource("Environment_8pujc")
 
 [node name="Area3D" type="Area3D" parent="." unique_id=751699593]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.179775, 1.1447473, -2.2183752)
