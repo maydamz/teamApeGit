@@ -6,16 +6,13 @@
 [ext_resource type="Script" uid="uid://cgq3o2y5v6gf6" path="res://scripts/world/spawner.gd" id="2_8pujc"]
 [ext_resource type="PackedScene" uid="uid://dtc61b6475wea" path="res://scenes/day_night_system.tscn" id="3_ms3tc"]
 [ext_resource type="PackedScene" uid="uid://dqb06g8gygk44" path="res://scenes/npc_path.tscn" id="6_8pujc"]
+[ext_resource type="Texture2D" uid="uid://mjv7nnqvc57w" path="res://icon.svg" id="7_ighmf"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pp2fj"]
 size = Vector3(3.0425873, 0.5078125, 3.1386719)
 
 [node name="PrototypingSmth" type="Node" unique_id=1038682562]
 script = ExtResource("1_hl5ok")
-
-[node name="spawner" type="Node3D" parent="." unique_id=2075921640]
-transform = Transform3D(-0.0052408176, 9.918744e-08, 0.9999863, 3.5527137e-15, 1, -9.9188796e-08, -0.9999863, -5.1982685e-10, -0.0052408176, 3.9924793, 1.6706498, -2.7260509)
-script = ExtResource("2_8pujc")
 
 [node name="Slums" parent="." unique_id=172014667 instance=ExtResource("1_8tnbf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.239975, 0, -3.0023642)
@@ -40,3 +37,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.179775, 1.1447473, -2.218
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=852602630]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7672195, 0.18363428, 0)
 shape = SubResource("BoxShape3D_pp2fj")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1093859328]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.076579, 2.1230493, -0.3406644)
+visible = false
+billboard = 1
+texture = ExtResource("7_ighmf")
+
+[node name="spawner1" type="Node3D" parent="." unique_id=1777049355]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8491905, 1.3014841, -0.9336307)
+script = ExtResource("2_8pujc")
+
+[node name="spawner2" type="Node3D" parent="." unique_id=333947213]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -26.561186, 1.3014841, -0.9336307)
+script = ExtResource("2_8pujc")

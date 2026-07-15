@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dqb06g8gygk44"]
 
 [ext_resource type="Texture2D" uid="uid://dorcucxnq8khn" path="res://assets/textures/npcs/nb1_spritesheet.png" id="1_wdry7"]
+[ext_resource type="Script" uid="uid://cuwc3ljphgpqa" path="res://scripts/world/npc_movement.gd" id="2_3qym3"]
 
 [sub_resource type="Curve3D" id="Curve3D_ms3tc"]
 _data = {
@@ -18,3 +19,5 @@ transform = Transform3D(-0.0052408176, 9.918744e-08, 0.9999863, 3.5527137e-15, 1
 [node name="walkingNPC" type="Sprite3D" parent="npcFollowedPath" unique_id=855682197]
 billboard = 2
 texture = ExtResource("1_wdry7")
+script = ExtResource("2_3qym3")
+speed = 10.0

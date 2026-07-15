@@ -1,4 +1,4 @@
-extends CharacterBody3D
+extends Sprite3D
 
 @export var speed: float = 30.0
 
