@@ -6,7 +6,8 @@ extends Control
 @onready var _animator: AnimationPlayer = $indicator/transparencyController
 
 func display_line(line : String, type = "mc"):
-	_indicator.visible = false
+	_animator.stop()
+	_indicator.modulate.a = 0
 	if type == "mc":
 		_dialogue.text = line
 		_speaker.text = "You"
@@ -18,8 +19,7 @@ func display_line(line : String, type = "mc"):
 		_speaker.text = "[color=Gold]Stranger[/color]"
 	_dialogue._ready()
 	open()
-	await _dialogue.tween.finished()
-	_indicator.visible = true
+	await _dialogue.tween.finished
 	_animator.play("reveal")
 	await _animator.animation_finished
 	_animator.play("blinking")

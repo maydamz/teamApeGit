@@ -8,9 +8,9 @@ extends Node3D
 # "mc" (which is the default), "friend" (light yellow text), or "npc" (golden text) 
 func _ready() -> void:
 	_dialogue.display_line("[wave]this also supports special formatting[/wave]", "friend")
-	await get_tree().create_timer(3.0).timeout
+	await get_tree().create_timer(6.0).timeout
 	_dialogue.display_line("i guess bro")
-	await get_tree().create_timer(3.0).timeout
+	await get_tree().create_timer(6.0).timeout
 	_dialogue.close()
 #check https://docs.godotengine.org/en/latest/tutorials/ui/bbcode_in_richtextlabel.html
 #for more formatting options (like color, bold, italic, etc)
