@@ -19,11 +19,6 @@ func _ready() -> void:
 		material.set_shader_parameter(SHADER_OUTLINE_VAR, 0.0)
 	
 	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
-	
-	var area = get_node_of_type_area2d() 
-	if area:
-		area.mouse_entered.connect(_on_area_2d_mouse_entered)
-		area.mouse_exited.connect(_on_area_2d_mouse_exited)
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventKey and event.pressed and not event.is_echo():
