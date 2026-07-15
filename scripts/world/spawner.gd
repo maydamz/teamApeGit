@@ -13,7 +13,9 @@ func _process(delta: float) -> void:
 	pass
 	
 func spawn() -> void:
-	#position.x = randf_range(-2.72, -1.29)
+	
+	global_position.z = randf_range(-.5, .5)
 	var npc = npc_scene.instantiate()
-	npc.global_position.x = randf_range(-2.72, -1.8)
 	add_child(npc)
+	#npc.global_position.x = randf_range(-2.72, -1.8)
+	

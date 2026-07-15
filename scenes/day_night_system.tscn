@@ -42,6 +42,66 @@ tracks/2/keys = {
 "update": 0,
 "values": [Color(3.5460563, 3.3169246, 0.74737155, 1), Color(2.8634198, 0.45597425, 0.32222727, 1)]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../WorldEnvironment:environment:sky:sky_material:sky_top_color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.4520718, 0.7012577, 0.98481405, 1), Color(0.7764706, 0.41960785, 0.40784314, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../WorldEnvironment:environment:sky:sky_material:sky_horizon_color")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.9439834, 0.90201366, 0.70475614, 1), Color(1.3772742, 0.50402504, 0.119795375, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../WorldEnvironment:environment:sky:sky_material:sky_energy_multiplier")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.1, 0.7]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../WorldEnvironment:environment:sky:sky_material:ground_bottom_color")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.39075062, 0.2999855, 0.1677143, 1), Color(0.30451462, 0.19343856, 0.07654356, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../WorldEnvironment:environment:sky:sky_material:ground_horizon_color")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.68481535, 0.6575539, 0.5344566, 1), Color(0.5256054, 0.2922744, 0.06854325, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_ms3tc"]
 resource_name = "Night to Sunrise"
@@ -82,6 +142,78 @@ tracks/2/keys = {
 "update": 0,
 "values": [Color(0.691, 0.803, 1.064, 1), Color(3.216, 0.696, 0.263, 1)]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../WorldEnvironment:environment:sky:sky_material:sky_top_color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.015160233, 0.12349182, 0.2635038, 1), Color(0.3764706, 0.4862745, 0.7647059, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../WorldEnvironment:environment:sky:sky_material:sky_horizon_color")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.0855273, 0.45672363, 0.6270595, 1), Color(1.074, 0.866, 0.153, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../WorldEnvironment:environment:sky:sky_material:sky_energy_multiplier")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.3, 0.8]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../WorldEnvironment:environment:sky:sky_material:ground_bottom_color")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.16208512, 0.107447825, 0.054195546, 1), Color(0.19215687, 0.14117648, 0.06666667, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../WorldEnvironment:environment:sky:sky_material:ground_horizon_color")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.20738864, 0.21013784, 0.23869002, 1), Color(0.77254903, 0.6392157, 0.2627451, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../WorldEnvironment:environment:sky:sky_material:ground_energy_multiplier")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.8, 1.0]
+}
 
 [sub_resource type="Animation" id="Animation_hl5ok"]
 length = 0.001
@@ -120,6 +252,78 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(3.5460563, 3.3169246, 0.74737155, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../WorldEnvironment:environment:sky:sky_material:sky_top_color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.37639183, 0.48544383, 0.7660146, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../WorldEnvironment:environment:sky:sky_material:sky_horizon_color")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1.0738252, 0.8656207, 0.15334159, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../WorldEnvironment:environment:sky:sky_material:sky_energy_multiplier")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.8]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../WorldEnvironment:environment:sky:sky_material:ground_bottom_color")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.19107878, 0.1418784, 0.06500279, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../WorldEnvironment:environment:sky:sky_material:ground_horizon_color")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.77387536, 0.6383336, 0.26398695, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../WorldEnvironment:environment:sky:sky_material:ground_energy_multiplier")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.8]
 }
 
 [sub_resource type="Animation" id="Animation_ighmf"]
@@ -161,6 +365,66 @@ tracks/2/keys = {
 "update": 0,
 "values": [Color(3.216, 0.696, 0.263, 1), Color(3.5460563, 3.3169246, 0.74737155, 1)]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../WorldEnvironment:environment:sky:sky_material:sky_top_color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.37639183, 0.48544383, 0.7660146, 1), Color(0.4520718, 0.7012577, 0.98481405, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../WorldEnvironment:environment:sky:sky_material:sky_horizon_color")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1.0738252, 0.8656207, 0.15334159, 1), Color(0.9439834, 0.90201366, 0.70475614, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../WorldEnvironment:environment:sky:sky_material:sky_energy_multiplier")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.8, 1.1]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../WorldEnvironment:environment:sky:sky_material:ground_bottom_color")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.19107878, 0.1418784, 0.06500279, 1), Color(0.39075062, 0.2999855, 0.1677143, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../WorldEnvironment:environment:sky:sky_material:ground_horizon_color")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.77387536, 0.6383336, 0.26398695, 1), Color(0.68481535, 0.6575539, 0.5344566, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_j0jw5"]
 resource_name = "new_animation"
@@ -201,6 +465,78 @@ tracks/2/keys = {
 "update": 0,
 "values": [Color(3.216, 0.696, 0.263, 1), Color(0.69131315, 0.80254436, 1.0639464, 1)]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../WorldEnvironment:environment:sky:sky_material:sky_top_color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.7764706, 0.41960785, 0.40784314, 1), Color(0.015160233, 0.12349184, 0.26350382, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../WorldEnvironment:environment:sky:sky_material:sky_horizon_color")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1.3772742, 0.50402504, 0.119795375, 1), Color(0.08552729, 0.45672363, 0.6270595, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../WorldEnvironment:environment:sky:sky_material:sky_energy_multiplier")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.7, 0.3]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../WorldEnvironment:environment:sky:sky_material:ground_bottom_color")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.30451462, 0.19343856, 0.07654356, 1), Color(0.16208512, 0.107447825, 0.054195546, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../WorldEnvironment:environment:sky:sky_material:ground_horizon_color")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.5256054, 0.2922744, 0.06854325, 1), Color(0.20738864, 0.21013784, 0.23869002, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../WorldEnvironment:environment:sky:sky_material:ground_energy_multiplier")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 0.8]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ighmf"]
 _data = {
@@ -212,12 +548,17 @@ _data = {
 }
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_j0jw5"]
+sky_top_color = Color(0.3764706, 0.4862745, 0.7647059, 1)
+sky_horizon_color = Color(1.074, 0.866, 0.153, 1)
+sky_energy_multiplier = 0.8
+ground_bottom_color = Color(0.19215687, 0.14117648, 0.06666667, 1)
+ground_horizon_color = Color(0.77254903, 0.6392157, 0.2627451, 1)
 
 [sub_resource type="Sky" id="Sky_hl5ok"]
 sky_material = SubResource("ProceduralSkyMaterial_j0jw5")
 
 [sub_resource type="Environment" id="Environment_8pujc"]
-background_mode = 1
+background_mode = 2
 background_color = Color(0.9216953, 0.7990291, 0.76493114, 1)
 sky = SubResource("Sky_hl5ok")
 ambient_light_color = Color(0.66791785, 0.33974802, 0.44291687, 1)
@@ -235,9 +576,9 @@ libraries/ = SubResource("AnimationLibrary_ighmf")
 script = ExtResource("1_0165g")
 
 [node name="Sun" type="DirectionalLight3D" parent="." unique_id=1673372893]
-transform = Transform3D(-0.19121699, 0.9810748, 0.030472293, -0.47516033, -0.1196872, 0.8717211, 0.8588706, 0.15220867, 0.489054, -24.296436, 41.09153, -9.632798)
-light_color = Color(3.5460563, 3.3169246, 0.74737155, 1)
-light_energy = 0.21
+transform = Transform3D(0.73598516, 0.49548763, 0.461322, 0.655483, -0.69196457, -0.30253473, 0.16931623, 0.52504987, -0.8340592, -24.296436, 41.09153, -9.632798)
+light_color = Color(3.216, 0.6960001, 0.263, 1)
+light_energy = 0.14
 light_indirect_energy = 2.017
 light_volumetric_fog_energy = 1.318
 light_angular_distance = 5.36
