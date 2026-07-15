@@ -3,7 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://1su47tyhnp5c" path="res://assets/map/Slums.glb" id="1_8tnbf"]
 [ext_resource type="Script" uid="uid://b3e8u13siup3m" path="res://scripts/main.gd" id="1_hl5ok"]
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="2_5y6i5"]
+[ext_resource type="Script" uid="uid://cgq3o2y5v6gf6" path="res://scripts/world/spawner.gd" id="2_8pujc"]
 [ext_resource type="PackedScene" uid="uid://dtc61b6475wea" path="res://scenes/day_night_system.tscn" id="3_ms3tc"]
+[ext_resource type="Texture2D" uid="uid://dorcucxnq8khn" path="res://assets/textures/npcs/nb1_spritesheet.png" id="5_hl5ok"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pp2fj"]
 size = Vector3(3.0425873, 0.5078125, 3.1386719)
@@ -17,6 +19,10 @@ point_count = 2
 
 [node name="PrototypingSmth" type="Node" unique_id=1038682562]
 script = ExtResource("1_hl5ok")
+
+[node name="spawner" type="Node3D" parent="." unique_id=2075921640]
+transform = Transform3D(-0.0052408176, 9.918744e-08, 0.9999863, 3.5527137e-15, 1, -9.9188796e-08, -0.9999863, -5.1982685e-10, -0.0052408176, 3.9924793, 1.6706498, -2.7260509)
+script = ExtResource("2_8pujc")
 
 [node name="Slums" parent="." unique_id=172014667 instance=ExtResource("1_8tnbf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.239975, 0, -3.0023642)
@@ -40,7 +46,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7672195, 0.18363428, 0)
 shape = SubResource("BoxShape3D_pp2fj")
 
 [node name="npcPath" type="Path3D" parent="." unique_id=1882928847]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2378879, 0)
 curve = SubResource("Curve3D_ms3tc")
 
 [node name="npcFollowedPath" type="PathFollow3D" parent="npcPath" unique_id=1413768353]
 transform = Transform3D(-0.0052408176, 9.918744e-08, 0.9999863, 3.5527137e-15, 1, -9.9188796e-08, -0.9999863, -5.1982685e-10, -0.0052408176, 3.4191742, 1.0999985, -1.7108724)
+
+[node name="walkingNPC" type="Sprite3D" parent="npcPath/npcFollowedPath" unique_id=1063595289]
+billboard = 2
+texture = ExtResource("5_hl5ok")
