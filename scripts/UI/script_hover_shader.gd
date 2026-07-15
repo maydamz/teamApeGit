@@ -17,14 +17,7 @@ var is_hovered: bool = false
 func _ready() -> void:
 	if material:
 		material.set_shader_parameter(SHADER_OUTLINE_VAR, 0.0)
-	
-	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
-
-func _input(event: InputEvent) -> void:
-	if event is InputEventKey and event.pressed and not event.is_echo():
-		if event.keycode == KEY_E:
-			toggle_inspect()
-
+		
 func _on_area_2d_mouse_entered() -> void:
 	is_hovered = true
 	if material and not is_inspecting:
@@ -74,7 +67,7 @@ func toggle_inspect() -> void:
 		
 		if is_hovered and material:
 			material.set_shader_parameter(SHADER_OUTLINE_VAR, max_thickness)
-
+			
 func get_node_of_type_area2d() -> Area2D:
 	if get_parent() is Area2D:
 		return get_parent()
@@ -82,3 +75,11 @@ func get_node_of_type_area2d() -> Area2D:
 		if child is Area2D:
 			return child
 	return null
+	
+func open_note():
+	if not is_inspecting:
+		toggle_inspect()
+
+func close_note():
+	if is_inspecting:
+		toggle_inspect()
