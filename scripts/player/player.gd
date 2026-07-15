@@ -1,4 +1,4 @@
-# Basic 3D first-person movement script
+# Player script
 
 # Player setup:
 # CharacterBody3D
@@ -40,6 +40,7 @@ const FOV_CHANGE = 1.5
 # Locks mouse to the window center
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	add_to_group("player")
 
 # First person camera controls
 func _unhandled_input(event):
@@ -55,6 +56,7 @@ func _physics_process(delta: float) -> void:
 	
 	# Sprint
 	if sprint_enabled == true and Input.is_action_pressed("sprint"):
+		print("DEBUG: Sprinting...")
 		speed = SPRINT_SPEED
 	else:
 		speed = WALK_SPEED
@@ -73,7 +75,7 @@ func _physics_process(delta: float) -> void:
 	# Enable head bobbing
 	t_bob += delta * velocity.length() * float(is_on_floor())
 	camera.transform.origin = _headbob(t_bob)
-	
+		
 	# FOV effects
 	var velocity_clamped = clamp(velocity.length(), 0.5, SPRINT_SPEED * 2)
 	var target_fov = base_fov + FOV_CHANGE * velocity_clamped
