@@ -11,18 +11,21 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("interact"):
 		interactPress.emit()
 		
-func display_line(line : String, type = "mc"):
+func display_line(line : String, type = "You"):
 	_animator.stop()
 	_indicator.modulate.a = 0
-	if type == "mc":
+	if type == "You":
 		_dialogue.text = line
 		_speaker.text = "You"
-	if type == "friend":
+	if type == "Cora":
 		_dialogue.text = "[color=Khaki]" + line + "[/color]"
 		_speaker.text = "[color=Khaki]Cora[/color]"
-	if type == "npc":
+	if type == "Stranger":
 		_dialogue.text = "[color=Gold]" + line + "[/color]"
 		_speaker.text = "[color=Gold]Stranger[/color]"
+	if type == "":
+		_dialogue.text = "[font_size=14][color=Gainsboro]" + line + "[/color][/font_size]"
+		_speaker.text = ""
 	_dialogue._ready()
 	open()
 	await _dialogue.tween.finished

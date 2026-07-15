@@ -2,6 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://cdyk8anelwlr4" path="res://assets/fonts/Salmon Typewriter 9 Regular.ttf" id="1_pq8q7"]
 [ext_resource type="Script" uid="uid://fgjh1qts2vrm" path="res://scripts/UI/dialogue.gd" id="1_pyidc"]
+[ext_resource type="Script" uid="uid://xjsqvgajyd47" path="res://scenes/all_dialog.gd" id="1_xcky8"]
 [ext_resource type="FontFile" uid="uid://cotffq7d3auyi" path="res://assets/fonts/Salmon Typewriter 9 Bold.ttf" id="3_2e7es"]
 [ext_resource type="Script" uid="uid://cklia2uk5xun5" path="res://scripts/UI/dialogue_fancy_text.gd" id="4_28aoi"]
 [ext_resource type="Script" uid="uid://cc06b371n2l8c" path="res://scripts/UI/test_open_script.gd" id="5_2e7es"]
@@ -65,14 +66,15 @@ _data = {
 
 [sub_resource type="Theme" id="Theme_qa8c0"]
 default_font = ExtResource("3_2e7es")
-default_font_size = 19
+default_font_size = 20
 
 [sub_resource type="Theme" id="Theme_gace6"]
 default_font = ExtResource("1_pq8q7")
-default_font_size = 19
+default_font_size = 18
 
 [node name="uiLayer" type="CanvasLayer" unique_id=1861078864]
 follow_viewport_enabled = true
+script = ExtResource("1_xcky8")
 
 [node name="dialogueContainer" type="Control" parent="." unique_id=719158770]
 layout_mode = 3
@@ -141,6 +143,7 @@ theme = SubResource("Theme_gace6")
 theme_override_colors/font_shadow_color = Color(0.083392166, 0.08339194, 0.08339203, 1)
 theme_override_constants/shadow_offset_x = 2
 theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/bold_font = ExtResource("3_2e7es")
 bbcode_enabled = true
 fit_content = true
 horizontal_alignment = 1
