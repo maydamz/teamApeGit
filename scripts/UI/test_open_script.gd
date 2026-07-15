@@ -1,7 +1,7 @@
 #how to use script
 extends Node3D
 #first allow urself to call from the control node
-@onready var _dialogue : Control = $uiLayer/dialogueContainer
+@onready var _dialogue : Control = $"../dialogueContainer"
 
 #then do _dialogue.display_line("DIALOGUE TEXT HERE", "speaker")
 #the "speaker" parameter just changes the color of the text, and can be:

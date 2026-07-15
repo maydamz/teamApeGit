@@ -20,6 +20,7 @@ func display_line(line : String, type = "mc"):
 	open()
 	_indicator.visible = true
 	_animator.play("reveal")
+	await _animator.animation_finished
 	_animator.play("blinking")
 	
 func dialogue_sc1() -> void:
