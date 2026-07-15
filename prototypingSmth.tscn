@@ -8,6 +8,13 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_pp2fj"]
 size = Vector3(3.0425873, 0.5078125, 3.1386719)
 
+[sub_resource type="Curve3D" id="Curve3D_ms3tc"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 3.4191742, 1.0999985, -1.7108724, 0, 0, 0, 0, 0, 0, -35.039257, 1.1000023, -1.5093194),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
 [node name="PrototypingSmth" type="Node" unique_id=1038682562]
 script = ExtResource("1_hl5ok")
 
@@ -31,3 +38,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.179775, 1.1447473, -2.218
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=852602630]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7672195, 0.18363428, 0)
 shape = SubResource("BoxShape3D_pp2fj")
+
+[node name="npcPath" type="Path3D" parent="." unique_id=1882928847]
+curve = SubResource("Curve3D_ms3tc")
+
+[node name="npcFollowedPath" type="PathFollow3D" parent="npcPath" unique_id=1413768353]
+transform = Transform3D(-0.0052408176, 9.918744e-08, 0.9999863, 3.5527137e-15, 1, -9.9188796e-08, -0.9999863, -5.1982685e-10, -0.0052408176, 3.4191742, 1.0999985, -1.7108724)
