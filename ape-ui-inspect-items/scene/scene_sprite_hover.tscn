@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://ccrwg4uoov3on"]
+
+[ext_resource type="Texture2D" uid="uid://cn2r04pqwbxuq" path="res://asset/sprite_note.png" id="1_3kf8f"]
+[ext_resource type="Shader" uid="uid://c4ncy3twhexie" path="res://shader_outline.gdshader" id="1_m22nm"]
+[ext_resource type="Script" uid="uid://gb3re627wttq" path="res://script/script_hover_shader.gd" id="3_35c3m"]
+[ext_resource type="AudioStream" uid="uid://beyap61nj82hi" path="res://asset/assets_sounds_ui_note_open.wav" id="4_q8mon"]
+[ext_resource type="AudioStream" uid="uid://crek0ebfqt616" path="res://asset/assets_sounds_ui_note_close.wav" id="5_34tig"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_m22nm"]
+shader = ExtResource("1_m22nm")
+shader_parameter/line_color = Color(1, 1, 0, 1)
+shader_parameter/outline_width = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wvhbo"]
+size = Vector2(155, 268)
+
+[node name="Node2D" type="Node2D" unique_id=1616971945]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1919101407]
+material = SubResource("ShaderMaterial_m22nm")
+position = Vector2(496.75, 218.75)
+scale = Vector2(0.37029287, 0.33561644)
+texture = ExtResource("1_3kf8f")
+script = ExtResource("3_35c3m")
+
+[node name="Label" type="Label" parent="Sprite2D" unique_id=1963224808]
+offset_left = -66.83899
+offset_top = -133.33673
+offset_right = -39.83899
+offset_bottom = -125.33673
+theme_override_colors/font_color = Color(1, 0, 1, 1)
+theme_override_font_sizes/font_size = 10
+text = "deez notes"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Sprite2D" unique_id=1299052431]
+stream = ExtResource("4_q8mon")
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Sprite2D" unique_id=1930998259]
+stream = ExtResource("5_34tig")
+
+[node name="Area2D" type="Area2D" parent="Sprite2D" unique_id=675788353]
+position = Vector2(0, -4)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D" unique_id=876938760]
+position = Vector2(-4, -4)
+shape = SubResource("RectangleShape2D_wvhbo")
+
+[connection signal="mouse_entered" from="Sprite2D/Area2D" to="Sprite2D" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Sprite2D/Area2D" to="Sprite2D" method="_on_area_2d_mouse_exited"]
