@@ -2,9 +2,65 @@
 
 [ext_resource type="FontFile" uid="uid://cdyk8anelwlr4" path="res://assets/fonts/Salmon Typewriter 9 Regular.ttf" id="1_pq8q7"]
 [ext_resource type="Script" uid="uid://fgjh1qts2vrm" path="res://scripts/UI/dialogue.gd" id="1_pyidc"]
-[ext_resource type="Script" uid="uid://cc06b371n2l8c" path="res://scripts/UI/test_open_script.gd" id="1_vvh5c"]
 [ext_resource type="FontFile" uid="uid://cotffq7d3auyi" path="res://assets/fonts/Salmon Typewriter 9 Bold.ttf" id="3_2e7es"]
 [ext_resource type="Script" uid="uid://cklia2uk5xun5" path="res://scripts/UI/dialogue_fancy_text.gd" id="4_28aoi"]
+
+[sub_resource type="Theme" id="Theme_lux21"]
+default_font = ExtResource("1_pq8q7")
+
+[sub_resource type="Animation" id="Animation_bhyd5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_2e7es"]
+resource_name = "blinking"
+length = 2.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate:a")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [1.0, 0.5, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_xcky8"]
+resource_name = "reveal"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.56666666),
+"transitions": PackedFloat32Array(1, 2),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_q4mab"]
+_data = {
+&"RESET": SubResource("Animation_bhyd5"),
+&"blinking": SubResource("Animation_2e7es"),
+&"reveal": SubResource("Animation_xcky8")
+}
 
 [sub_resource type="Theme" id="Theme_qa8c0"]
 default_font = ExtResource("3_2e7es")
@@ -14,13 +70,10 @@ default_font_size = 19
 default_font = ExtResource("1_pq8q7")
 default_font_size = 19
 
-[node name="rootFORDIALOGUE" type="Node3D" unique_id=1296331082]
-script = ExtResource("1_vvh5c")
-
-[node name="uiLayer" type="CanvasLayer" parent="." unique_id=536031944]
+[node name="uiLayer" type="CanvasLayer" unique_id=1861078864]
 follow_viewport_enabled = true
 
-[node name="dialogueContainer" type="Control" parent="uiLayer" unique_id=1210499589]
+[node name="dialogueContainer" type="Control" parent="." unique_id=719158770]
 layout_mode = 3
 anchor_left = 0.187
 anchor_top = 0.75600004
@@ -34,7 +87,26 @@ grow_horizontal = 2
 grow_vertical = 0
 script = ExtResource("1_pyidc")
 
-[node name="speakerName" type="RichTextLabel" parent="uiLayer/dialogueContainer" unique_id=671708566]
+[node name="indicator" type="Label" parent="dialogueContainer" unique_id=1835622919]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -236.0
+offset_top = -22.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = SubResource("Theme_lux21")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Press E to continue"
+horizontal_alignment = 2
+
+[node name="transparencyController" type="AnimationPlayer" parent="dialogueContainer/indicator" unique_id=825623983]
+libraries/ = SubResource("AnimationLibrary_q4mab")
+
+[node name="speakerName" type="RichTextLabel" parent="dialogueContainer" unique_id=825213576]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = -0.22500001
@@ -54,7 +126,7 @@ scroll_active = false
 tab_size = 8
 horizontal_alignment = 1
 
-[node name="dialogueTextContainer" type="VBoxContainer" parent="uiLayer/dialogueContainer" unique_id=834834877]
+[node name="dialogueTextContainer" type="VBoxContainer" parent="dialogueContainer" unique_id=174579868]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -62,7 +134,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="dialogueText" type="RichTextLabel" parent="uiLayer/dialogueContainer/dialogueTextContainer" unique_id=402866051]
+[node name="dialogueText" type="RichTextLabel" parent="dialogueContainer/dialogueTextContainer" unique_id=1037776295]
 layout_mode = 2
 theme = SubResource("Theme_gace6")
 theme_override_colors/font_shadow_color = Color(0.083392166, 0.08339194, 0.08339203, 1)
