@@ -12,6 +12,9 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 	
+	#legit just call this function
+	#mess with the randf_range thingy for the positioning
+	#bcs its global position
 func spawn() -> void:
 	
 	global_position.z = randf_range(-.5, .5)
