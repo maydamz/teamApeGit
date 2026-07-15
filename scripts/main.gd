@@ -4,8 +4,6 @@ extends Node
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	_spawner.spawn()
-	_spawner.spawn()
-	_spawner.spawn()
 	day_night_sys.changeTime("Morning")
 	await get_tree().create_timer(10).timeout
 	day_night_sys.changeTime("Midday")

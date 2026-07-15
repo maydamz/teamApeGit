@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dqb06g8gygk44"]
+
+[ext_resource type="Texture2D" uid="uid://dorcucxnq8khn" path="res://assets/textures/npcs/nb1_spritesheet.png" id="1_wdry7"]
+
+[sub_resource type="Curve3D" id="Curve3D_ms3tc"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 3.4191742, 1.0999985, -1.7108724, 0, 0, 0, 0, 0, 0, -35.039257, 1.1000023, -1.5093194),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[node name="npcPath" type="Path3D" unique_id=2017180891]
+curve = SubResource("Curve3D_ms3tc")
+
+[node name="npcFollowedPath" type="PathFollow3D" parent="." unique_id=224777062]
+transform = Transform3D(-0.0052408176, 9.918744e-08, 0.9999863, 3.5527137e-15, 1, -9.9188796e-08, -0.9999863, -5.1982685e-10, -0.0052408176, 3.4191742, 1.0999985, -1.7108724)
+
+[node name="walkingNPC" type="Sprite3D" parent="npcFollowedPath" unique_id=855682197]
+billboard = 2
+texture = ExtResource("1_wdry7")
