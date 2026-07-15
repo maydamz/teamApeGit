@@ -18,6 +18,7 @@ func display_line(line : String, type = "mc"):
 		_speaker.text = "[color=Gold]Stranger[/color]"
 	_dialogue._ready()
 	open()
+	await _dialogue.tween.finished()
 	_indicator.visible = true
 	_animator.play("reveal")
 	await _animator.animation_finished
