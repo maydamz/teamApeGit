@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://djv7x6wnbk78l"
-path="res://.godot/imported/distorted_arguing.ogg-005ec0fb3d4792faa055fc42b76297ee.oggvorbisstr"
+path="res://.godot/imported/distorted_arguing.ogg-985f627d24d728a1c24427d36d6372af.oggvorbisstr"
 
 [deps]
 
-source_file="res://assets/sounds/ambience/distorted_arguing.ogg"
-dest_files=["res://.godot/imported/distorted_arguing.ogg-005ec0fb3d4792faa055fc42b76297ee.oggvorbisstr"]
+source_file="res://assets/sounds/ambience/looping/distorted_arguing.ogg"
+dest_files=["res://.godot/imported/distorted_arguing.ogg-985f627d24d728a1c24427d36d6372af.oggvorbisstr"]
 
 [params]
 

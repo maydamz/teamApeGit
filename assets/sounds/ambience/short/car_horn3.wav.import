@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dgaah4hxw2i2g"
-path="res://.godot/imported/car_horn3.wav-af7b894ba04d5387d65cc15554a276ec.sample"
+path="res://.godot/imported/car_horn3.wav-fbe0a5b16cecc79d79f144467caa292a.sample"
 
 [deps]
 
-source_file="res://assets/sounds/ambience/car_horn3.wav"
-dest_files=["res://.godot/imported/car_horn3.wav-af7b894ba04d5387d65cc15554a276ec.sample"]
+source_file="res://assets/sounds/ambience/short/car_horn3.wav"
+dest_files=["res://.godot/imported/car_horn3.wav-fbe0a5b16cecc79d79f144467caa292a.sample"]
 
 [params]
 

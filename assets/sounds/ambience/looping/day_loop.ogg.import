@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://br5064gwem6h5"
-path="res://.godot/imported/day_loop.ogg-1a807ebcd75cd981cd45f95ac3a5aad0.oggvorbisstr"
+path="res://.godot/imported/day_loop.ogg-de1506582c94838d60fe06d3e989fe05.oggvorbisstr"
 
 [deps]
 
-source_file="res://assets/sounds/ambience/day_loop.ogg"
-dest_files=["res://.godot/imported/day_loop.ogg-1a807ebcd75cd981cd45f95ac3a5aad0.oggvorbisstr"]
+source_file="res://assets/sounds/ambience/looping/day_loop.ogg"
+dest_files=["res://.godot/imported/day_loop.ogg-de1506582c94838d60fe06d3e989fe05.oggvorbisstr"]
 
 [params]
 

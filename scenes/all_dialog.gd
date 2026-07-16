@@ -1,4 +1,5 @@
 extends CanvasLayer
+
 var dialogue1 = [
 	"Cora: [wave][shake][font_size=30]ANDRO![/font_size][/shake][/wave]",
 	"Cora: Hey, what’s up? It’s my birthday today and you didn’t even greet me..",
@@ -61,6 +62,18 @@ var dialogue3 = [
 	"Cora: [wave freq=2.5][font_size=15]Okay... see you.[font_size=15][/wave]"
 ]
 
+var interactionPlayer = [
+	"You: Mam-ser, bili na po kayo ng basahan, pangkabuhayan lang po.",
+	"You: Tsong! Maybe you need new rags to replace your old ones? Baka lang po."
+]
+
+var interactionNPC = [
+	"Stranger: [font_size=15](ignores)[/font_size]",
+	"Stranger: Why don’t you get a real job?",
+	"Stranger: Kuya, ‘wag mo na akong abalahin, may pupuntahan pa ako!",
+	"Stranger: Wala akong maibibigay sa’yo, Kuya."
+]
+
 var dialogueDestroy = [
 	"UNFINISHED"
 ]
@@ -69,6 +82,21 @@ var dialogueEnding = [
 	"UNFINISHED"
 ]
 
-var dialogueInteractions = [
-	"UNFINISHED"
-]
+var controller = false
+
+func _dialogueCreate(scene: Array) -> void:
+	var speakers = []
+	var dialogues = []
+	if controller:
+		return
+	controller = true
+	for i in scene:
+		var dialogueParts : PackedStringArray = i.split(": ", true, 1)
+		for names in range(0, dialogueParts.size(), 2):
+			speakers.append(dialogueParts[names])
+		for texts in range(1, dialogueParts.size(), 2):
+			dialogues.append(dialogueParts[texts])
+		for x in range(speakers.size()):
+			$dialogueContainer.display_line(dialogues[x]+str(x), speakers[x])
+			await $dialogueContainer.interactPress
+		controller = false

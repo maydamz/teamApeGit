@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://b0hos4dcwq42h"
-path="res://.godot/imported/eerie_loop.ogg-eea4c5c424025d4a02cff2c72ab48df5.oggvorbisstr"
+path="res://.godot/imported/eerie_loop.ogg-7e24ccb50f268f21d92db14c98043b1d.oggvorbisstr"
 
 [deps]
 
-source_file="res://assets/sounds/ambience/eerie_loop.ogg"
-dest_files=["res://.godot/imported/eerie_loop.ogg-eea4c5c424025d4a02cff2c72ab48df5.oggvorbisstr"]
+source_file="res://assets/sounds/ambience/looping/eerie_loop.ogg"
+dest_files=["res://.godot/imported/eerie_loop.ogg-7e24ccb50f268f21d92db14c98043b1d.oggvorbisstr"]
 
 [params]
 

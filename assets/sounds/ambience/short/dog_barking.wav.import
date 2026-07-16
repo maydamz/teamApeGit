@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dapxxk35v6k0x"
-path="res://.godot/imported/dog_barking.wav-b040b668bfbf9153c4d020c4e6105250.sample"
+path="res://.godot/imported/dog_barking.wav-39d9c817432f2cbfc5eb4509c42d9a53.sample"
 
 [deps]
 
-source_file="res://assets/sounds/ambience/dog_barking.wav"
-dest_files=["res://.godot/imported/dog_barking.wav-b040b668bfbf9153c4d020c4e6105250.sample"]
+source_file="res://assets/sounds/ambience/short/dog_barking.wav"
+dest_files=["res://.godot/imported/dog_barking.wav-39d9c817432f2cbfc5eb4509c42d9a53.sample"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://dv86smduq2n8y"
-path="res://.godot/imported/night_street_loop.ogg-24612943d18744d3edc5ecafb4e4da4c.oggvorbisstr"
+path="res://.godot/imported/night_street_loop.ogg-e2ebc58d8f8b8ad07fb97506ec5eb466.oggvorbisstr"
 
 [deps]
 
-source_file="res://assets/sounds/ambience/night_street_loop.ogg"
-dest_files=["res://.godot/imported/night_street_loop.ogg-24612943d18744d3edc5ecafb4e4da4c.oggvorbisstr"]
+source_file="res://assets/sounds/ambience/looping/night_street_loop.ogg"
+dest_files=["res://.godot/imported/night_street_loop.ogg-e2ebc58d8f8b8ad07fb97506ec5eb466.oggvorbisstr"]
 
 [params]
 
