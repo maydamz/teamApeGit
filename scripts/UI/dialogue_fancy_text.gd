@@ -1,6 +1,6 @@
 extends RichTextLabel
 
-var textSpeed: float = 1.5
+var textSpeed: float = 3.0
 var tween: Tween
 func _ready() -> void:
 	visible_ratio = 0.0

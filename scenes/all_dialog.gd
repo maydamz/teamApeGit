@@ -30,7 +30,7 @@ var dialogue2 = [
 	"You: ...",
 	"Cora: Now, come on. I have a few minutes left before I gotta do some stuff.",
 	"Cora: I cooouuuld walk you to your spot.",
-	"You: Don’t worry about that, you’ve done so much for me already.",
+	"You: Please don’t worry about that, you’ve done so much for me already.",
 	"Cora: Of course, you’re my friend! I’ll always be here for you.",
 	"Cora: And considering your situation now.. I really just wanna help you in any way that I can.",
 	"Cora: [font_size=22]So please, I insist.[/font_size]",
