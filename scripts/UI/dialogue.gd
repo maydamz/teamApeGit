@@ -14,6 +14,8 @@ func _input(event: InputEvent) -> void:
 func display_line(line : String, type = "You"):
 	_animator.stop()
 	_indicator.modulate.a = 0
+	#if line.length() >= 10:
+		#_dialogue.textSpeed = 0.5
 	if type == "You":
 		_dialogue.text = line
 		_speaker.text = "You"
@@ -32,7 +34,7 @@ func display_line(line : String, type = "You"):
 	_animator.play("reveal")
 	await _animator.animation_finished
 	_animator.play("blinking")
-
+	
 func open():
 	visible = true
 	

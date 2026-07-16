@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://b3e8u13siup3m" path="res://scripts/main.gd" id="1_hl5ok"]
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="2_5y6i5"]
 [ext_resource type="Script" uid="uid://cgq3o2y5v6gf6" path="res://scripts/world/spawner.gd" id="2_8pujc"]
+[ext_resource type="PackedScene" uid="uid://tjcl8sytknbr" path="res://scenes/dialogue_scene.tscn" id="2_ighmf"]
 [ext_resource type="PackedScene" uid="uid://dtc61b6475wea" path="res://scenes/day_night_system.tscn" id="3_ms3tc"]
 [ext_resource type="PackedScene" uid="uid://dqb06g8gygk44" path="res://scenes/npc_path.tscn" id="6_8pujc"]
 
@@ -34,13 +35,15 @@ volumetric_fog_density = 0.236
 [node name="PrototypingSmth" type="Node" unique_id=1038682562]
 script = ExtResource("1_hl5ok")
 
+[node name="uiLayer" parent="." unique_id=1861078864 instance=ExtResource("2_ighmf")]
+
 [node name="Slums" parent="." unique_id=172014667 instance=ExtResource("1_8tnbf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.239975, 0, -3.0023642)
 
 [node name="DayNightSystem" parent="." unique_id=590354505 instance=ExtResource("3_ms3tc")]
 
 [node name="Sun" parent="DayNightSystem" index="0" unique_id=1673372893]
-transform = Transform3D(0.7359851, 0.49548748, 0.46132207, 0.6680958, -0.6417174, -0.37662536, 0.10942523, 0.5853979, -0.8033277, -24.296436, 294.5266, -9.632798)
+transform = Transform3D(0.7359851, 0.49548745, 0.46132207, 0.6680958, -0.6417174, -0.37662536, 0.10942523, 0.5853979, -0.8033277, -24.296436, 294.5266, -9.632798)
 light_color = Color(3.5460563, 3.3169246, 0.74737155, 1)
 light_energy = 0.14
 light_indirect_energy = 0.974

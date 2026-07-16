@@ -9,12 +9,7 @@ extends Node3D
 # "You" (which is the default), "Cora" (light yellow text), or "Stranger" (golden text) 
 # or also "" (for certain inspects)
 func _ready() -> void:
-	ui_layer._dialogueCreate(ui_layer.dialogue1)
-	#_dialogue.display_line("[font_size=15](ignores)[/font_size]", "Stranger")
-	#await _dialogue.interactPress
-	#_dialogue.display_line("[font_size=20]Ulol[/font_size]", "You")
-	#await _dialogue.interactPress
-	#_dialogue.close()
+	ui_layer._dialogueCreate(ui_layer.dialogue2)
 #check https://docs.godotengine.org/en/latest/tutorials/ui/bbcode_in_richtextlabel.html
 #for more formatting options (like color, bold, italic, etc)
 

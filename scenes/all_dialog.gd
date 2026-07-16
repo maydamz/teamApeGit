@@ -96,7 +96,8 @@ func _dialogueCreate(scene: Array) -> void:
 			speakers.append(dialogueParts[names])
 		for texts in range(1, dialogueParts.size(), 2):
 			dialogues.append(dialogueParts[texts])
-		for x in range(speakers.size()):
-			$dialogueContainer.display_line(dialogues[x]+str(x), speakers[x])
-			await $dialogueContainer.interactPress
-		controller = false
+	for x in range(speakers.size()):
+		$dialogueContainer.display_line(dialogues[x], speakers[x])
+		await $dialogueContainer/dialogueTextContainer/dialogueText.tween.finished
+		await $dialogueContainer.interactPress 
+	$dialogueContainer.close()

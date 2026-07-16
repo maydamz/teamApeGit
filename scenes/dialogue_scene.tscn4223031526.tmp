@@ -89,6 +89,7 @@ offset_bottom = 0.23199463
 grow_horizontal = 2
 grow_vertical = 0
 script = ExtResource("1_pyidc")
+metadata/_edit_use_anchors_ = true
 
 [node name="indicator" type="Label" parent="dialogueContainer" unique_id=1835622919]
 layout_mode = 1

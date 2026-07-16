@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="projectApe"
-run/main_scene="uid://tjcl8sytknbr"
+run/main_scene="uid://dpkaam44kvx3o"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
