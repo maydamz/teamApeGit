@@ -39,12 +39,12 @@ script = ExtResource("1_hl5ok")
 [node name="uiLayer" parent="." unique_id=1861078864 instance=ExtResource("2_ighmf")]
 
 [node name="Slums" parent="." unique_id=172014667 instance=ExtResource("1_8tnbf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.239975, 0, -3.0023642)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.239975, 0, -3.8915596)
 
 [node name="DayNightSystem" parent="." unique_id=590354505 instance=ExtResource("3_ms3tc")]
 
 [node name="Sun" parent="DayNightSystem" index="0" unique_id=1673372893]
-transform = Transform3D(0.7359851, 0.49548736, 0.46132207, 0.6680958, -0.64171726, -0.37662536, 0.10942523, 0.5853978, -0.8033277, -24.296436, 294.5266, -9.632798)
+transform = Transform3D(0.7359851, 0.49548733, 0.46132207, 0.6680958, -0.6417172, -0.37662536, 0.10942523, 0.5853977, -0.8033277, -24.296436, 294.5266, -9.632798)
 light_color = Color(3.5460563, 3.3169246, 0.74737155, 1)
 light_energy = 0.14
 light_indirect_energy = 0.974
@@ -61,11 +61,20 @@ transform = Transform3D(2.9379492, 0.28277647, 2.6997206, 2.259808, 1.9492624, -
 environment = SubResource("Environment_8pujc")
 
 [node name="npcPath" parent="." unique_id=2017180891 instance=ExtResource("6_8pujc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2327662, 1.1567754, -1.2791405)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2327662, 1.1567754, 3.5940433)
 
 [node name="ProtoController" parent="." unique_id=533232366 instance=ExtResource("2_5y6i5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.825676, 1.7898827, 24.022457)
 script = ExtResource("7_j0jw5")
+
+[node name="Player" parent="ProtoController" index="0" unique_id=1819140571]
+mesh = null
+
+[node name="CollisionShape3D" parent="ProtoController" index="1" unique_id=975426419]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0.9, 0)
+
+[node name="Head" parent="ProtoController" index="2" unique_id=1957835200]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 1.7, 0)
 
 [node name="spawner1" type="Node3D" parent="." unique_id=1777049355]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.003085, 1.3791999, -1.8237436)
