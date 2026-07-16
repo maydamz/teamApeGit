@@ -2,7 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://cdyk8anelwlr4" path="res://assets/fonts/Salmon Typewriter 9 Regular.ttf" id="1_pq8q7"]
 [ext_resource type="Script" uid="uid://fgjh1qts2vrm" path="res://scripts/UI/dialogue.gd" id="1_pyidc"]
-[ext_resource type="Script" uid="uid://xjsqvgajyd47" path="res://scenes/all_dialog.gd" id="1_xcky8"]
+[ext_resource type="Script" uid="uid://xjsqvgajyd47" path="res://scripts/UI/all_dialog.gd" id="1_xcky8"]
 [ext_resource type="FontFile" uid="uid://cotffq7d3auyi" path="res://assets/fonts/Salmon Typewriter 9 Bold.ttf" id="3_2e7es"]
 [ext_resource type="Script" uid="uid://cklia2uk5xun5" path="res://scripts/UI/dialogue_fancy_text.gd" id="4_28aoi"]
 [ext_resource type="Script" uid="uid://cc06b371n2l8c" path="res://scripts/UI/test_open_script.gd" id="5_2e7es"]

@@ -19,8 +19,8 @@ extends CharacterBody3D
 # Movement variables
 var speed
 var sprint_enabled = false # Sprint is disabled by default
-const WALK_SPEED = 5.0
-const SPRINT_SPEED = 8.0
+const WALK_SPEED = 4.5
+const SPRINT_SPEED = 7.0
 
 # Camera bob variables
 const SENSITIVITY = 0.001
@@ -30,7 +30,7 @@ var t_bob = 0.0
 
 # FOV control variables
 var base_fov = 75.0
-const FOV_CHANGE = 1.5
+const FOV_CHANGE = 1.0
 
 
 # Accessing head and camera as variables
