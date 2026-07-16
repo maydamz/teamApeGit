@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="2_5y6i5"]
 [ext_resource type="Script" uid="uid://cgq3o2y5v6gf6" path="res://scripts/world/spawner.gd" id="2_8pujc"]
 [ext_resource type="PackedScene" uid="uid://tjcl8sytknbr" path="res://scenes/dialogue_scene.tscn" id="2_ighmf"]
+[ext_resource type="PackedScene" uid="uid://cspuca3d2b6jv" path="res://assets/map/WeirdSlums.glb" id="3_a158c"]
 [ext_resource type="PackedScene" uid="uid://dtc61b6475wea" path="res://scenes/day_night_system.tscn" id="3_ms3tc"]
 [ext_resource type="PackedScene" uid="uid://dqb06g8gygk44" path="res://scenes/npc_path.tscn" id="6_8pujc"]
 [ext_resource type="Script" uid="uid://c8tshuxfgbabi" path="res://scripts/player/player.gd" id="7_j0jw5"]
@@ -41,6 +42,9 @@ volumetric_fog_density = 0.236
 script = ExtResource("1_hl5ok")
 
 [node name="uiLayer" parent="." unique_id=1861078864 instance=ExtResource("2_ighmf")]
+
+[node name="WeirdSlums" parent="." unique_id=1136153 instance=ExtResource("3_a158c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.10659, -0.36740208, -3.658123)
 
 [node name="Slums" parent="." unique_id=172014667 instance=ExtResource("1_8tnbf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.239975, 0, -3.8915596)
