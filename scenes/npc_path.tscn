@@ -310,7 +310,7 @@ transform = Transform3D(-0.00010518631, 0.0009836705, 0.9999995, 0, 0.9999995, -
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="npcFollowedPath" unique_id=630161775]
 transform = Transform3D(-0.0052408176, 7.1054274e-15, -0.9999863, 9.923655e-08, 1, -5.197762e-10, 0.9999863, -9.917497e-08, -0.0052408185, 0, -0.387, 0)
-pixel_size = 0.003
+pixel_size = 0.0025
 billboard = 1
 shaded = true
 sprite_frames = SubResource("SpriteFrames_pp2fj")

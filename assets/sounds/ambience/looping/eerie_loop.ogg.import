@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/eerie_loop.ogg-7e24ccb50f268f21d92db14c98043b
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0

@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/day_loop.ogg-de1506582c94838d60fe06d3e989fe05
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0
