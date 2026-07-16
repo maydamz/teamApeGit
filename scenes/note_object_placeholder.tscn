@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://nwngu58wyl24"]
+
+[ext_resource type="Script" uid="uid://c31v12kw6rn2i" path="res://scripts/note_object.gd" id="1_5werk"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_qmg03"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qmg03"]
+
+[node name="Note Object" type="Node3D" unique_id=337377578]
+script = ExtResource("1_5werk")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1488386205]
+mesh = SubResource("BoxMesh_qmg03")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1051330460]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=300674389]
+shape = SubResource("BoxShape3D_qmg03")

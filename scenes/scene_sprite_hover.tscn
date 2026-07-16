@@ -1,8 +1,9 @@
-[gd_scene format=3 uid="uid://ccrwg4uoov3on"]
+[gd_scene format=3 uid="uid://yjofm5tyw6oc"]
 
 [ext_resource type="Shader" uid="uid://c4ncy3twhexie" path="res://assets/shaders/shader_outline.gdshader" id="1_m22nm"]
+[ext_resource type="Script" uid="uid://0ymt8bfolet6" path="res://scripts/UI/scene_sprite_hover.gd" id="1_nhf4h"]
 [ext_resource type="Texture2D" uid="uid://cn2r04pqwbxuq" path="res://assets/textures/ui/sprite_note.png" id="2_ihs5f"]
-[ext_resource type="Script" uid="uid://gb3re627wttq" path="res://scripts/UI/script_hover_shader.gd" id="3_35c3m"]
+[ext_resource type="Script" uid="uid://tstkehgrtiv6" path="res://scripts/UI/script_hover_shader.gd" id="3_35c3m"]
 [ext_resource type="AudioStream" uid="uid://binmmdvhf1ah0" path="res://assets/sounds/ui/note_open.wav" id="4_ihs5f"]
 [ext_resource type="AudioStream" uid="uid://4exd6ihr2jqf" path="res://assets/sounds/ui/note_close.wav" id="5_dp2q0"]
 
@@ -14,16 +15,19 @@ shader_parameter/outline_width = 0.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wvhbo"]
 size = Vector2(155, 268)
 
-[node name="Node2D" type="Node2D" unique_id=1616971945]
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1763505749]
+script = ExtResource("1_nhf4h")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1919101407]
+[node name="Node2D" type="Node2D" parent="." unique_id=1616971945]
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D" unique_id=1919101407]
 material = SubResource("ShaderMaterial_m22nm")
 position = Vector2(496.75, 218.75)
 scale = Vector2(0.37029287, 0.33561644)
 texture = ExtResource("2_ihs5f")
 script = ExtResource("3_35c3m")
 
-[node name="Label" type="Label" parent="Sprite2D" unique_id=1963224808]
+[node name="Label" type="Label" parent="Node2D/Sprite2D" unique_id=1963224808]
 offset_left = -66.83899
 offset_top = -133.33673
 offset_right = -39.83899
@@ -32,27 +36,27 @@ theme_override_colors/font_color = Color(1, 0, 1, 1)
 theme_override_font_sizes/font_size = 10
 text = "deez notes"
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Sprite2D" unique_id=1299052431]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Node2D/Sprite2D" unique_id=1299052431]
 stream = ExtResource("4_ihs5f")
 
-[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Sprite2D" unique_id=1930998259]
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Node2D/Sprite2D" unique_id=1930998259]
 stream = ExtResource("5_dp2q0")
 
-[node name="Area2D" type="Area2D" parent="Sprite2D" unique_id=675788353]
+[node name="Area2D" type="Area2D" parent="Node2D/Sprite2D" unique_id=675788353]
 position = Vector2(0, -4)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D" unique_id=876938760]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Sprite2D/Area2D" unique_id=876938760]
 position = Vector2(-4, -4)
 shape = SubResource("RectangleShape2D_wvhbo")
 
-[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=391558433]
+[node name="Sprite2D2" type="Sprite2D" parent="Node2D" unique_id=391558433]
 material = SubResource("ShaderMaterial_m22nm")
 position = Vector2(496.75, 218.75)
 scale = Vector2(0.37029287, 0.33561644)
 texture = ExtResource("2_ihs5f")
 script = ExtResource("3_35c3m")
 
-[node name="Label" type="Label" parent="Sprite2D2" unique_id=1039786147]
+[node name="Label" type="Label" parent="Node2D/Sprite2D2" unique_id=1039786147]
 offset_left = -66.83899
 offset_top = -133.33673
 offset_right = -39.83899
@@ -61,20 +65,20 @@ theme_override_colors/font_color = Color(1, 0, 1, 1)
 theme_override_font_sizes/font_size = 10
 text = "deez notes"
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Sprite2D2" unique_id=326595724]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Node2D/Sprite2D2" unique_id=326595724]
 stream = ExtResource("4_ihs5f")
 
-[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Sprite2D2" unique_id=1699144753]
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Node2D/Sprite2D2" unique_id=1699144753]
 stream = ExtResource("5_dp2q0")
 
-[node name="Area2D" type="Area2D" parent="Sprite2D2" unique_id=1583631445]
+[node name="Area2D" type="Area2D" parent="Node2D/Sprite2D2" unique_id=1583631445]
 position = Vector2(0, -4)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D2/Area2D" unique_id=1410776102]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Sprite2D2/Area2D" unique_id=1410776102]
 position = Vector2(-4, -4)
 shape = SubResource("RectangleShape2D_wvhbo")
 
-[connection signal="mouse_entered" from="Sprite2D/Area2D" to="Sprite2D" method="_on_area_2d_mouse_entered"]
-[connection signal="mouse_exited" from="Sprite2D/Area2D" to="Sprite2D" method="_on_area_2d_mouse_exited"]
-[connection signal="mouse_entered" from="Sprite2D2/Area2D" to="Sprite2D2" method="_on_area_2d_mouse_entered"]
-[connection signal="mouse_exited" from="Sprite2D2/Area2D" to="Sprite2D2" method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="Node2D/Sprite2D/Area2D" to="Node2D/Sprite2D" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Node2D/Sprite2D/Area2D" to="Node2D/Sprite2D" method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="Node2D/Sprite2D2/Area2D" to="Node2D/Sprite2D2" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Node2D/Sprite2D2/Area2D" to="Node2D/Sprite2D2" method="_on_area_2d_mouse_exited"]
