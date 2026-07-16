@@ -39,6 +39,8 @@ const FLOOR_SNAP = 0.35
 @onready var head: Node3D = $Head
 @onready var camera: Camera3D = $Head/Camera3D
 
+var camera_rest_position: Vector3
+
 # Locks mouse to the window center
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -48,6 +50,11 @@ func _ready():
 	floor_snap_length = FLOOR_SNAP
 	safe_margin = 0.05
 	floor_max_angle = deg_to_rad(55.0)
+
+	# Helps maintain constant speed on slopes
+	floor_constant_speed = true
+
+	camera_rest_position = camera.position
 
 # First person camera controls
 func _unhandled_input(event):
@@ -60,9 +67,6 @@ func _physics_process(delta: float) -> void:
 	# Gravity
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-	else:
-		# Helps stay attached when walking down slopes/stairs
-		apply_floor_snap()
 
 	# Sprint
 	if sprint_enabled == true and Input.is_action_pressed("sprint"):
@@ -88,16 +92,20 @@ func _physics_process(delta: float) -> void:
 		velocity.x = direction.x * speed
 		velocity.z = direction.z * speed
 	else:
-		velocity.x = lerp(velocity.x, direction.x * speed, delta * 7.0)
-		velocity.z = lerp(velocity.z, direction.z * speed, delta * 7.0)
+		velocity.x = lerp(velocity.x, 0.0, delta * 7.0)
+		velocity.z = lerp(velocity.z, 0.0, delta * 7.0)
+
+	# Collision handling with other bodies
+	move_and_slide()
 
 	# Enable head bobbing
-	t_bob += delta * velocity.length() * float(is_on_floor())
-	camera.transform.origin = _headbob(t_bob)
+	var horizontal_speed = Vector2(velocity.x, velocity.z).length()
+	t_bob += delta * horizontal_speed * float(is_on_floor())
+	camera.position = camera_rest_position + _headbob(t_bob)
 
 	# FOV effects
 	var velocity_clamped = clamp(
-		velocity.length(),
+		horizontal_speed,
 		0.5,
 		SPRINT_SPEED * 2
 	)
@@ -105,12 +113,9 @@ func _physics_process(delta: float) -> void:
 	var target_fov = base_fov + FOV_CHANGE * velocity_clamped
 	camera.fov = lerp(camera.fov, target_fov, delta * 8.0)
 
-	# Collision handling with other bodies
-	move_and_slide()
-
 # Head bobbing
 func _headbob(time) -> Vector3:
 	var pos = Vector3.ZERO
 	pos.y = sin(time * BOB_FREQ) * BOB_AMP
-	pos.x = cos(time * BOB_FREQ / 2) * BOB_AMP
+	pos.x = cos(time * BOB_FREQ / 2.0) * BOB_AMP
 	return pos
