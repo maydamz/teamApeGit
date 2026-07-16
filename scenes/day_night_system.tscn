@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dtc61b6475wea"]
 
 [ext_resource type="Script" uid="uid://dpfysla8k43in" path="res://scripts/world/day_night.gd" id="1_0165g"]
-[ext_resource type="Texture2D" uid="uid://dp0hj60dfqm7r" path="res://assets/textures/ambience/placeholder_sun.png" id="2_rhlwk"]
+[ext_resource type="Texture2D" uid="uid://chulm8gow6uv1" path="res://assets/textures/ambience/sun.PNG" id="2_rhlwk"]
 
 [sub_resource type="Animation" id="Animation_8pujc"]
 resource_name = "Setting Sun"
@@ -572,12 +572,12 @@ _data = {
 }
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_j0jw5"]
-sky_top_color = Color(0.7764706, 0.41960785, 0.40784314, 1)
-sky_horizon_color = Color(1.3772742, 0.50402504, 0.119795375, 1)
-sky_energy_multiplier = 0.6
-ground_bottom_color = Color(0.30451462, 0.19343856, 0.07654356, 1)
-ground_horizon_color = Color(0.5256054, 0.2922744, 0.068543255, 1)
-ground_energy_multiplier = 0.8
+sky_top_color = Color(0.015160233, 0.12349182, 0.2635038, 1)
+sky_horizon_color = Color(0.0855273, 0.45672363, 0.6270595, 1)
+sky_energy_multiplier = 0.3
+ground_bottom_color = Color(0.16208512, 0.107447825, 0.054195546, 1)
+ground_horizon_color = Color(0.20738864, 0.21013784, 0.23869002, 1)
+ground_energy_multiplier = 0.4
 
 [sub_resource type="Sky" id="Sky_hl5ok"]
 sky_material = SubResource("ProceduralSkyMaterial_j0jw5")
@@ -601,9 +601,9 @@ libraries/ = SubResource("AnimationLibrary_ighmf")
 script = ExtResource("1_0165g")
 
 [node name="Sun" type="DirectionalLight3D" parent="." unique_id=1673372893]
-transform = Transform3D(-0.19121711, 0.9810747, 0.030472133, -0.92073566, -0.1685262, -0.3519159, -0.3401204, -0.095349126, 0.9355355, -24.296436, 41.09153, -9.632798)
-light_color = Color(3.216, 0.6960001, 0.263, 1)
-light_energy = 0.07
+transform = Transform3D(-0.19121718, 0.98107463, 0.030471511, -0.054186728, 0.020445878, -0.9983215, -0.9800509, -0.19254732, 0.049251623, -24.296436, 41.09153, -9.632798)
+light_color = Color(0.69131327, 0.80254436, 1.0639464, 1)
+light_energy = 0.05
 light_angular_distance = 5.36
 light_specular = 0.5
 shadow_enabled = true
