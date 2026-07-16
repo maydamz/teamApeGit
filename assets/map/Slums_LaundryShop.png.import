@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mcv6j0qw46hy"
-path.s3tc="res://.godot/imported/Slums_Slum.jpg-ab4c8e880b2d8a3d0507b985af2776b1.s3tc.ctex"
+uid="uid://b8ngynn7wtowd"
+path.s3tc="res://.godot/imported/Slums_LaundryShop.png-622c34ed53ad8e54507dfbb7096eaa65.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "2110efd6759b94e662db666439c70571"
+"md5": "b564099ac77ba0fb61ad98503c468b84"
 }
 
 [deps]
 
-source_file="res://assets/map/Slums_Slum.jpg"
-dest_files=["res://.godot/imported/Slums_Slum.jpg-ab4c8e880b2d8a3d0507b985af2776b1.s3tc.ctex"]
+source_file="res://assets/map/Slums_LaundryShop.png"
+dest_files=["res://.godot/imported/Slums_LaundryShop.png-622c34ed53ad8e54507dfbb7096eaa65.s3tc.ctex"]
 
 [params]
 

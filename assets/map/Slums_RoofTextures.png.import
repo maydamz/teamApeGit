@@ -2,20 +2,24 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8bxpb5ace72q"
-path="res://.godot/imported/WallTextures.png-cbfb27a4a21a401e6e9f7796b9e43f88.ctex"
+uid="uid://krb7xscfhphs"
+path.s3tc="res://.godot/imported/Slums_RoofTextures.png-7e7d6e4c60dae6a38f330383031de320.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "fd69f31c693e9da4824240037ac105a0"
 }
 
 [deps]
 
-source_file="res://assets/textures/maps/WallTextures.png"
-dest_files=["res://.godot/imported/WallTextures.png-cbfb27a4a21a401e6e9f7796b9e43f88.ctex"]
+source_file="res://assets/map/Slums_RoofTextures.png"
+dest_files=["res://.godot/imported/Slums_RoofTextures.png-7e7d6e4c60dae6a38f330383031de320.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -23,7 +27,7 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=false
+mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -37,4 +41,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

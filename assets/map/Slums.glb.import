@@ -43,57 +43,6 @@ _subresources={
 "nodes": {
 "PATH:Apartment Building": {
 "generate/physics": true
-},
-"PATH:Apartment Building_002": {
-"generate/physics": true
-},
-"PATH:Ground": {
-"generate/physics": true
-},
-"PATH:House1": {
-"generate/physics": true
-},
-"PATH:House10": {
-"generate/physics": true
-},
-"PATH:House11": {
-"generate/physics": true
-},
-"PATH:House12": {
-"generate/physics": true
-},
-"PATH:House2": {
-"generate/physics": true
-},
-"PATH:House3": {
-"generate/physics": true
-},
-"PATH:House4": {
-"generate/physics": true
-},
-"PATH:House5": {
-"generate/physics": true
-},
-"PATH:House6": {
-"generate/physics": true
-},
-"PATH:House7": {
-"generate/physics": true
-},
-"PATH:House8": {
-"generate/physics": true
-},
-"PATH:House9": {
-"generate/physics": true
-},
-"PATH:Laundry shop": {
-"generate/physics": true
-},
-"PATH:MCHouse": {
-"generate/physics": true
-},
-"PATH:Parking Hut": {
-"generate/physics": true
 }
 }
 }
